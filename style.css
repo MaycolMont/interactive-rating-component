@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --medium-dark-blue: hsl(213, 19%, 22%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+
+    --medium-grey-transparent: rgba(124, 135, 152, 0.1);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 0.9375rem;
+    color: var(--medium-grey);
+    min-height: 100vh;
+    font-family: "Overpass", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-dark-blue);
+}
+
+.card {
+    max-width: 25.5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--dark-blue);
+    background: radial-gradient(circle at top center, var(--medium-dark-blue) 0%, var(--dark-blue) 70%)
+}
+
+.rating__star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: var(--medium-grey-transparent);
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.rating__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 1.5rem 0
+}
+
+.rating__input-radio {
+    display: none;
+}
+
+label {
+    aspect-ratio: 1 / 1;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--medium-grey-transparent);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+label:hover {
+    background-color: var(--orange);
+    color: var(--white)
+}
+
+.rating__input-radio:checked + label {
+    background-color: var(--medium-grey);
+    color: var(--white)
+}
+
+input[type="submit"] {
+    background-color: var(--orange);
+    color: var(--white);
+    width: 100%;
+    border: 0px;
+    padding: 0.8rem 0;
+    border-radius: 2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+input[type="submit"]:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.thank-you {
+    display: none;
+}
+
+.card__info {
+    color: var(--orange);
+    border-radius: 1rem;
+    background-color: var(--medium-grey-transparent);
+    width: fit-content;
+    padding: 0.4rem 1rem;
+    margin: 2rem auto;
+    border-radius: 3rem;
+}
+
+.thank-you {
+    text-align: center;
+    padding: 3rem 2rem;
+}
